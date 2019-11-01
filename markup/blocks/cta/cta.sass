@@ -1,0 +1,54 @@
+.cta
+  background-color: #000000
+  &__container
+    padding-top: 8px
+    padding-bottom: 22px
+    color: #fff 
+    text-align: center
+    
+  &__title
+    margin-bottom: 14px
+    margin-left: -23px
+    font-size: 25px
+    font-weight: 100
+    line-height: 1.2
+    text-align: center
+    letter-spacing: 0.2px
+    
+
+    @include r(860px)
+      margin-left: 0
+
+    @include r(425px)
+      font-size: 22px
+    
+  &__form
+    position: relative
+    left: -10px
+    margin: auto
+    max-width: 976px
+    width: 100%
+
+    @include r(425px)
+      left: 0
+
+  .form__submit
+    max-width: 300px
+    width: 100%
+    @include r(860px)
+      max-width: 270px
+
+.cta_theme_second
+  padding-top: 15px
+  padding-bottom: 14px
+  .cta__title
+    margin-right: -8px
+    margin-bottom: 24px
+    font-size: 28px
+    letter-spacing: 0.2px
+    line-height: 1.3
+
+    @include r(860px)
+      margin-right: 0
+
+    

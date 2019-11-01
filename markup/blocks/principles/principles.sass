@@ -1,0 +1,59 @@
+.principles
+  overflow: hidden
+  &__container
+    padding-top: 80px
+    padding-bottom: 46px
+
+    @include r(768px)
+      padding-top: (80px / 2)
+
+  &__title
+    margin-bottom: 88px
+
+  &__list
+    margin: auto
+    max-width: 968px
+    display: flex 
+    justify-content: center
+    align-items: flex-start
+    flex-wrap: wrap
+
+    @include r(1024px)
+      max-width: 100%
+
+  &__item
+    margin-bottom: 36px
+    max-width: 320px
+    width: 100%
+    flex-shrink: 1
+    // flex-basis: 320px
+    
+    color: #505050 
+    text-align: center
+
+    @include r(1024px)
+      max-width: 50% 
+    
+    @include r(500px)
+      max-width: 100%
+    
+  &__icon
+    margin: auto
+    margin-bottom: 19px
+    height: 170px
+
+  &__item-title
+    margin-left: -5px
+    margin-bottom: 25px
+    font-size: 22px
+    font-weight: 600
+    // letter-spacing: -0.16px
+    letter-spacing: 0.04px
+    
+  &__text
+    margin-left: -13px
+    font-weight: 100 
+    font-size: 21px
+    // letter-spacing: -0.13px
+    letter-spacing: -0.5px
+    line-height: 1.1

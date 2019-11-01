@@ -1,0 +1,130 @@
+.clients
+  background-position: calc(50% + 60px) 0 
+  background-size: cover
+  background-color: #F6F5F5 
+  &__container
+    padding-top: 67px
+    padding-bottom: 70px
+
+    @include r(425px)
+      padding-top: 50px
+      padding-bottom: 50px
+
+  &__title
+    margin-bottom: 55px
+  
+  &__carousel-w
+    margin-left: auto
+    margin-right: 0
+    max-width: 767px
+    width: 100%
+
+    @include r(1020px)
+      max-width: 100%
+
+  &__carousel
+    margin-left: -15px
+    display: flex
+    justify-content: flex-end
+    
+  .slick-list
+    padding-top: 66px !important
+    
+  &__client
+    position: relative
+    margin-left: 15px
+    padding-right: 38px
+    padding-left: 44px
+    padding-bottom: 30px
+    width: 376px
+    height: 406px
+    background-color: #ffffff
+
+    @include r(540px)
+      height: 480px
+
+    @include r(425px)
+      padding-left: 20px
+      padding-right: 20px
+
+  // &__client-w
+
+  &__image
+    position: relative
+    left: -12px
+    border: 6px solid #660603 
+    margin: auto
+    margin-top: -66px
+    margin-bottom: 35px
+    width: 129px
+    height: 129px
+    overflow: hidden
+    border-radius: 50%
+
+
+    img
+      // width: 100%
+      object-fit: cover
+      
+  &__client-title
+    margin-bottom: 33px
+    font-size: 16px
+    font-weight: 600
+    line-height: 1.4
+    text-transform: uppercase
+
+    @include r(425px)
+      margin-bottom: 20px
+    
+  // &__list
+
+  &__item
+    margin-bottom: 3px
+    font-size: 17px
+
+  &__item-term
+    margin-right: 5px
+    display: inline-block
+    font-weight: 600 
+
+  &__item-desc 
+    font-weight: 100
+    // line-height: 1.4
+    line-height: 1.7
+
+    a
+      text-decoration: none
+      color: inherit 
+      
+.slick-dotted
+  &.slick-slider
+    margin-bottom: 57px
+
+.slick-dots
+  padding-left: 14px
+  // padding-right: 29px
+  bottom: -57px
+  li
+    margin-left: 0
+    margin-right: 20px
+
+    &:last-child
+      margin-right: 0
+
+    button
+      text-indent: -9999px
+      &:before
+        background-color: #1f1a17
+        opacity: 1
+        border-radius: 50%
+        @include tr(all .3s ease)
+        
+    &.slick-active
+      button
+        &:before
+          background-color: #660603
+          opacity: 1
+          @include tr(all .3s ease)
+
+
+

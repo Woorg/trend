@@ -1,0 +1,86 @@
+.hero
+  position: relative
+  
+  min-height: 784px
+  background-position: 50% 50%   
+  background-size: cover
+  background-repeat: no-repeat
+
+  @include r(768px) 
+    min-height: 924px
+
+  @include r(425px)
+    min-height: 774px
+
+  &__container
+    position: relative
+    padding-top: 160px
+    padding-bottom: 85px
+
+    
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    @include r(768px)
+      padding-top: (160px / 2 )
+      padding-bottom: (85px / 2)
+    
+  &__w
+    position: relative
+    margin-bottom: 32px
+    margin-left: -18px
+    padding-top: 62px
+    padding-right: 300px
+    padding-bottom: 54px
+    padding-left: 17px
+    max-width: 862px
+    width: 100%
+    background: rgba(255, 255, 255, .17) 
+
+    @include r(768px)
+      margin-left: 0
+      padding-right: 20px
+      padding-left: 20px
+
+  &__title
+    color: #fff
+    font-weight: 100   
+    font-size: 40px
+    text-align: center
+    letter-spacing: -0.55px
+    line-height: 1.125
+    text-transform: uppercase
+    @include r(425px)
+      font-size: 25px
+
+    span
+      display: block
+      font-size: 39px
+      font-weight: 600 
+      letter-spacing: 0.1px
+
+      @include r(425px)
+        font-size: 24px
+    
+  &__image
+    position: absolute
+    bottom: 0
+    right: 116px
+  
+    @include r(768px)
+      display: none
+
+
+  &__text
+    padding-right: 16px
+    color: #FFF 
+    font-size: 24px
+    font-weight: 100
+    line-height: 1.41666666666667
+    text-transform: uppercase
+    letter-spacing: .31px
+    text-align: center
+
+    @include r(425px)
+      font-size: 20px

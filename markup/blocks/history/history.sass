@@ -1,0 +1,107 @@
+.history
+  &__container
+    padding-top: 66px
+    padding-bottom: 101px
+
+    @include r(768px)
+      padding-bottom: 50px
+      padding-bottom: 50px
+
+  // &__title
+  //   margin-bottom: 77px
+
+  &__w
+    position: relative
+    padding-bottom: 65px
+    display: flex
+
+    @include r(768px)
+      flex-wrap: wrap
+
+  &__photo,
+  &__content
+    max-width: 50%
+    width: 100%
+
+    @include r(768px)
+      max-width: 100%
+    
+  &__photo
+    position: relative
+    height: 646px
+    // &:after
+    //   position: absolute
+    //   right: 0
+    //   bottom: 0
+    //   content: '' 
+    //   width: 1643px
+    //   height: 647px
+    //   background-color: #660603
+    //   background-image: linear-gradient(to top, rgba(102, 6, 3, 0.93) 0%, rgba(223, 42, 36, 0.93) 100%)
+    //   opacity: .86
+    //   border-radius: 0 280px 280px 0 
+    @include r(600px)
+      height: 424px
+
+    // @include r(424px)
+
+    img
+      position: absolute
+      right: 0
+      bottom: 0
+      max-width: 959px
+      width: 959px
+      
+      @include r(768px)
+        width: 890px
+
+      @include r(600px)
+        width: 600px
+
+
+  &__content
+    margin-top: -2px
+    padding-top: 0
+    padding-left: 30px 
+
+    @include r(768px)
+      margin-top: 30px
+      padding-left: 0
+
+  &__name,
+  &__role
+    color: #717171
+    text-transform: uppercase
+
+  &__name
+    position: relative
+    margin-bottom: 20px
+    padding-bottom: 4px
+    font-weight: 600 
+    font-size: 32px
+    letter-spacing: -0.36px
+    &:after
+      position: absolute
+      top: 100%
+      left: 0
+      content: ''
+      width: 178px
+      height: 5px
+      background-color: #660603
+     
+
+  &__role
+    font-weight: 100
+    font-size: 26px
+    letter-spacing: .3px
+
+  &__text
+    margin-top: 19px
+    color: #717171
+    font-weight: 100 
+    p
+      margin-bottom: 32px
+      font-size: 21px
+      line-height: 1.48
+      letter-spacing: .16px
+    

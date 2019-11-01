@@ -1,0 +1,60 @@
+.cooperation
+  &__container
+    padding-top: 64px
+    padding-bottom: 50px
+  &__title
+    margin-bottom: 52px
+  
+  &__list
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    
+  &__item
+    padding-left: 30px
+    padding-right: 30px
+    max-width: 33.3%
+    width: 100%
+    height: 294px
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    
+    @include r(1012px)
+      max-width: 50%
+
+    @include r(734px)
+      padding-top: 30px
+      padding-bottom: 30px
+      max-width: 100%
+      min-height: 300px
+      height: auto
+
+    &:nth-child(odd)
+      background-color: #660603
+      color: #fefefe
+      
+    &:nth-child(even)
+      background-color: #f6f5f5
+      color: #717171
+
+  // &__item-w
+
+  &__item-title
+    margin-left: -2px
+    font-size: 17px
+    line-height: 1.5
+    font-weight: 600 
+    letter-spacing: -.7px
+    text-transform: uppercase
+    
+  &__text
+    margin-left: -4px
+    font-size: 18px
+    font-weight: 100 
+    line-height: 1.425
+

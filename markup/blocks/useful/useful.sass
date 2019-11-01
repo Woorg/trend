@@ -1,0 +1,87 @@
+.useful
+  background-color: #f6f5f5
+  &__container
+    padding-top: 80px
+    padding-bottom: 50px
+
+    @include r(425px)
+      padding-top: 50px
+      
+  &__title
+    margin-bottom: 40px
+
+  &__list-w
+    overflow: hidden
+    
+  &__list
+    margin-left: -23px
+    display: flex
+
+    @include r(1024px)
+      flex-wrap: wrap
+
+    @include r(782px)
+      margin-left: 0
+
+
+  &__service
+    padding-bottom: 24px
+    margin-left: 23px
+    max-width: 365px
+    width: 100%
+    height: 669px
+    flex-basis: 365px
+    display: flex
+    flex-direction: column
+    
+    background: #fff
+
+    @include r(782px)
+      margin-left: 0
+      height: auto
+
+    @include r(1024px)
+      margin-bottom: 24px
+      max-width: 47.2%
+      flex-grow: 1
+      // flex-basis: 50%
+
+    @include r(782px)
+      margin-left: 0
+      max-width: 100%
+      flex-basis: auto
+  &__image
+    margin-bottom: 15px
+    img
+      width: 100%
+      object-fit: cover
+      
+  &__service-title,
+  &__service-text
+    padding-right: 0
+    padding-left: 20px
+    @include r(782px)
+      padding-right: 20px
+      padding-left: 20px
+
+  &__service-title
+    margin-bottom: 23px
+    font-size: 22px
+    font-weight: 600
+    // letter-spacing: -0.16px
+    letter-spacing: -0.76px
+  &__service-text
+    font-size: 19px
+    // letter-spacing: -0.16px
+    letter-spacing: 0.04px
+    line-height: 1.06
+    p
+      margin-bottom: 24px
+
+  &__button-w
+    margin-top: auto
+    text-align: center
+    
+  &__more
+    margin-left: -10px
+  

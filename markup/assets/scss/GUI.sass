@@ -1,0 +1,107 @@
+.title
+  position: relative
+  padding-top: 18px
+  padding-left: 28px
+  color: #717171
+  font-size: 40px
+  font-weight: 100
+  line-height: 1.25
+  text-transform: uppercase
+  letter-spacing: .42px
+
+  @include r(768px)
+    padding-top: 22px
+    font-size: 25px
+
+  &:after
+    position: absolute
+    top: 0
+    left: 0
+    content: ''
+    // @include bg($title-arrow)
+
+.button
+  @include resetbutton()
+  display: inline-block
+  vertical-align: top
+  text-decoration: none
+  text-align: center
+  @include tr(all .3s ease)
+  
+  &:hover
+    @include tr(all .3s ease)
+  
+  &_theme_biggest
+    padding-top: 11px
+    padding-right: 60px
+    padding-bottom: 11px
+    padding-left: 60px
+    height: 40px
+    color: #fff
+    background-color: #660603
+    font-weight: 100 
+    font-size: 20px
+    line-height: 1
+    letter-spacing: .16px
+    
+    &:hover
+      color: #fff 
+      background-color: darken(#660603, 10)
+
+  &_theme_big
+    padding-top: 5px
+    padding-right: 86px
+    padding-bottom: 7px
+    padding-left: 89px
+    
+    height: 50px
+
+    background-color: #660603
+    
+    color: #fff
+    font-size: 26px
+    font-weight: 100 
+    letter-spacing: .91px
+    
+    border-radius: 20px 20px 20px 20px
+    
+    &:hover
+      background-color: darken(#660603, 10)
+    
+  &_theme_general
+    padding-top: 8px
+    padding-right: 25px
+    padding-bottom: 7px
+    padding-left: 25px
+    
+    height: 39px
+    background-color: #660603
+
+    color: #fff 
+    font-size: 21px
+    font-weight: 100 
+    line-height: 1
+    // letter-spacing: .16px
+    letter-spacing: .36px
+    white-space: nowrap
+    
+    border-radius: 25px 25px 25px 25px 
+
+    &:hover
+      background-color: darken(#660603, 10)
+
+  &_theme_cta
+    margin-top: 30px
+    padding-top: 10px
+    padding-bottom: 9px
+    padding-right: 30px
+    padding-left: 30px
+    display: inline-block
+    vertical-align: top
+    color: #3D7186
+    font-size: 18px
+    background: #FAB500 
+    text-transform: uppercase
+
+    &:hover
+      background-color: lighten(#FAB500, 10)

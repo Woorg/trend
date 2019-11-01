@@ -1,0 +1,64 @@
+.advantages
+  &__container
+      padding-top: 24px
+      padding-bottom: 70px
+
+      @include r(425px)
+        padding-bottom: 50px
+
+  &__title
+    margin-bottom: 80px
+
+  &__list
+    margin: auto
+    max-width: 960px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+
+    @include r(830px)
+
+      justify-content: flex-start
+      flex-wrap: wrap
+
+  &__item
+    // max-width: 320px
+    max-width: 260px
+    width: 100%
+    font-weight: 600
+    text-align: center
+
+    @include r(809px)
+      margin-bottom: 30px
+      max-width: 50%
+
+    @include r(520px)
+      max-width: 100%
+
+
+  &__icon
+    margin: auto
+    margin-bottom: 10px
+
+  &__item-title
+    margin-bottom: 20px
+    margin-left: 11px
+    font-size: 24px
+    font-weight: 100
+    letter-spacing: -.16px
+
+    @include r(425px)
+      margin-left: 0
+
+  &__text
+    margin-right: -20px
+    margin-left: -20px
+    font-size: 19px
+    line-height: 1.2
+    font-weight: 100
+    letter-spacing: -.13px
+
+
+    @include r(425px)
+      margin-left: 0
+      margin-right: 0

@@ -1,0 +1,12 @@
+mixin hero(data)
+    section.hero.lazy(data-bg="url('assets/images/general/hero-bg.jpg')")&attributes(attributes)
+      +header()
+      .hero__container.container
+        .hero__w
+          h1.hero__title 
+            span Уже через 10 дней 
+            | получайте до 35 клиентов ежедневно
+          
+          img.hero__image.lazy(data-src="assets/images/general/robocop.png", alt="robocop")
+        
+        .hero__text Делаем сайты, рекламу <br/>Юридическая гарантия результата прописана в договоре
