@@ -9,10 +9,18 @@
     justify-content: flex-start
     align-items: flex-start
     
+    @include r(1107px)
+      flex-wrap: wrap
+      
+
   &__nav
     margin-top: 16px
     margin-left: 50px
     color: #FFF 
+    @include r(1106px)
+      order: 1
+      margin-left: 0
+      
 
   &__contacts
     margin-top: 15px
@@ -38,13 +46,19 @@
   &__bottom
     margin-top: -60px
     padding-bottom: 20px
+    
+    @include r(1107px)
+      margin-top: 0
 
   &__copyright
     padding-left: 128px
     color: #796f6f
     font-size: 16px
     font-weight: 400
-
+    
+    @include r(1107px)
+      padding-left: 0
+  
     a
       color: inherit 
       text-decoration: underline

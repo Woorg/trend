@@ -31,6 +31,13 @@ body
     flex-wrap: wrap 
     justify-content: flex-start
     align-items: flex-start
+    
+    @include r(1200px)
+      flex-wrap: nowrap
+      
+    @include r(766px)
+      flex-wrap: wrap
+    
 
   &__content
     padding-right: 33px
@@ -40,6 +47,16 @@ body
     flex-grow: 0
     flex-basis: auto
     
+    @include r(1200px)
+      max-width: 70.8%
+      
+    
+    @include r(766px)
+      max-width: 100%
+      padding-right: 0
+      flex-shrink: 0
+      // order: 1
+      
   &__side
     max-width: 320px
     margin-bottom: 116px
@@ -47,6 +64,11 @@ body
     flex-shrink: 1
     flex-grow: 0
     flex-basis: auto
+    @include r(1200px)
+      flex-shrink: 0
+    
+    @include r(766px)
+      max-width: 100%
   // &__footer
   //   overflow: hidden
   

@@ -1,20 +1,29 @@
 .nav
   position: relative
   display: flex
+  
+  @include r(1106px)
+    padding-top: 44px
+    padding-bottom: 0
+  
+  @include r(425px)
+    padding-top: 12px
+  
+    
   &__trigger
     @include resetbutton()
     display: none
     width: 36px
     height: 39px
     background-size: cover
-    fill: #fff
+    fill: #000
     @include tr(fill .3s ease)
     
-    @include r(1030px)
+    @include r(1106px)
       display: block
       
     &:hover
-      fill: darken(#fff, 10)   
+      fill: darken(#000, 10)   
       @include tr(fill .3s ease)
 
   &__trigger_active + .nav__list-w
@@ -22,9 +31,11 @@
     z-index: 1
     top: 100%
     right: 0
-    padding-top: 20px
-    padding-bottom: 20px
+    padding-top: 0
+    padding-bottom: 0
+    background: #f4f4f4
     width: 300px
+    height: 100vh
     display: block
     @include tr(all .3s ease)
 
@@ -33,19 +44,32 @@
       text-align: right
       
     .nav__item
-      margin-bottom: 10px
+      margin-bottom: 0
       margin-right: 0
       line-height: 1.25
+      &:after
+        top: calc(50% + 1px)
+        right: 10px
+    
+    .nav__link
+      padding-top: 15px
+      padding-right: 40px
+      padding-bottom: 15px
+      padding-left: 40px
 
   &__list-w
     display: flex
-      
-    @include r(1030px)
+    
+    @include r(1106px)
       display: none
-
+      flex-wrap: wrap
+      
 
   &__list
     display: flex
+    
+    @include r(1106px)
+      flex-wrap: wrap
     
   &__item
     position: relative
@@ -56,13 +80,19 @@
     letter-spacing: -0.12px
     @include tr(color .3s ease)
     
+    @include r(1106px)
+      margin-right: 30px      
+
     &:after
       position: absolute
       top: calc(50% - 4px)
       right: -50px
       content: ""
       @include bg($nav-sep)
-      transform: translateY(-50%) 
+      transform: translateY(-50%)
+      
+      @include r(1106px)
+        right: -25px
 
     &:hover
       color: #212121
@@ -89,30 +119,51 @@
     color: inherit
     text-decoration: none
     
+.nav
+  &.nav_secondary
+    @include r(1106px)
+      // margin-top: 0
+      padding-top: 0
+      max-width: 100%
+      width: 100%
+      
+    .nav__trigger-icon
+      fill: #fff
+    .nav__list
+      @include r(1106px)
+        max-width: 100%
+        width: 100%
 
-.nav_secondary
-  .nav__item
-    color: #FFF
-    @include tr(all .3s ease)
-    &:after
-      top: calc(50% + 3px)
-    &:hover
-      .nav__link
-        box-shadow: inset 0 -1px 1px #fdd408 
-        color: #fdd408
-        @include tr(all .3s ease)
-
-  .nav__item_current
-    color: #fdd408
-    @include tr(all .3s ease)
-    .nav__link
-      color: #fdd408
-      font-weight: 400 
-      box-shadow: inset 0 -1px 1px #fdd408
+    .nav__item
+      color: #FFF
       @include tr(all .3s ease)
-  .nav__link
-    border-bottom: none 
-    padding-top: 0
-    padding-bottom: 0
-    box-shadow: inset 0 -1px 1px #fff
-    @include tr(all .3s ease)
+      @include r(1106px)
+        margin-right: 0
+        margin-bottom: 20px
+        width: 100%
+        
+      &:after
+        top: calc(50% + 3px)
+        @include r(1106px)
+          display: none
+      &:hover
+        .nav__link
+          box-shadow: inset 0 -1px 1px #fdd408 
+          color: #fdd408
+          @include tr(all .3s ease)
+      
+
+    .nav__item_current
+      color: #fdd408
+      @include tr(all .3s ease)
+      .nav__link
+        color: #fdd408
+        font-weight: 400 
+        box-shadow: inset 0 -1px 1px #fdd408
+        @include tr(all .3s ease)
+    .nav__link
+      border-bottom: none 
+      padding-top: 0
+      padding-bottom: 0
+      box-shadow: inset 0 -1px 1px #fff
+      @include tr(all .3s ease)

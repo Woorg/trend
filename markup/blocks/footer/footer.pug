@@ -7,21 +7,17 @@ mixin footer(data)
             img(src='assets/images/general/logo-white.png', alt="Trend")
         
         nav.footer__nav.nav.nav_secondary
-          button.nav__trigger
-            != pugHelpers.Icon.call(locals, {iconName: 'menu', className: 'nav__trigger-icon', iconWidth: '36', iconHeight: '39'})
-
-          .nav__list-w
-            ul.nav__list
-              li.nav__item
-                a.nav__link(href="#") Главная
-              li.nav__item
-                a.nav__link(href="#") Наши проекты
-              li.nav__item
-                a.nav__link(href="#") Гарантии
-              li.nav__item.nav__item_current
-                a.nav__link(href="#") О нас
-              li.nav__item
-                a.nav__link(href="#") Контакты
+          ul.nav__list
+            li.nav__item
+              a.nav__link(href="#") Главная
+            li.nav__item
+              a.nav__link(href="#") Наши проекты
+            li.nav__item
+              a.nav__link(href="#") Гарантии
+            li.nav__item.nav__item_current
+              a.nav__link(href="#") О нас
+            li.nav__item
+              a.nav__link(href="#") Контакты
 
         .footer__contacts
           .footer__time Пн-Пт 9:00-18:00       

@@ -1,6 +1,6 @@
 .header
   position: relative
-  z-index: 1
+  z-index: 2
   // top: 0
   // left: 0
   border-top: 3px solid #212121
@@ -8,6 +8,9 @@
   background-color: #f4f4f4
   color: #212121
   box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.2)
+  
+  @include r(425px)
+    height: auto
 
   &__container
     padding-top: 7px
@@ -15,19 +18,40 @@
     display: flex
     align-items: flex-start
   
+    @include r(425px)
+      flex-wrap: wrap
+
   &__logo
     position: relative
     z-index: 1
     margin-top: -7px
     
+    @include r(425px)
+      margin-left: auto
+      margin-right: auto
+    
   &__nav
     margin-top: 0
     margin-left: auto
     
+    @include r(1106px)
+      margin-left: 20px
+      order: 1
+    @include r(425px)
+      margin-left: auto
+
   &__contacts
     margin-left: auto
     text-align: right
-
+    
+    @include r(1106px)
+      // margin-left: 20px
+      margin-left: auto
+    
+    @include r(425px)
+      margin-top: 10px
+      max-width: 100%
+      width: 100%
 
   &__time
     margin-bottom: 5px

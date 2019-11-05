@@ -12,12 +12,18 @@
   &__w
     max-width: 870px
     width: 100%
-
+    @include r(1131px)
+      // max-width: 640px
+      margin: auto
+      max-width: 610px
+      
   &__image
     position: absolute
     z-index: 1
     top: -61px
     right: 17px
+    @include r(1131px)
+      display: none
   
   &__title
     margin-bottom: 23px
