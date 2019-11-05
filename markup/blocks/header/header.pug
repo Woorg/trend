@@ -1,30 +1,17 @@
 mixin header(data)
   header.header
     .header__container.container
-      a.header__logo.logo(href="#")
-        .logo__icon 
-          img(src='assets/images/general/logo-icon.png', alt="ПроДвижение — агентство интернет маркетинга")
-        .logo__w
-          .logo__brand ПроДвижение
-          .logo__slogan Агентство интернет маркетинга
-
-      .header__email.email
-        a.email__val(href="mailto:") info@pro-dvigeniye.ru
-        .email__text по любым вопросам 
-          span Работаем по России и СНГ
-          
-      .header__phone.phone
-        a.phone__val(href="tel:") 8-800-2017519
-        .phone__time пн-пт 10:00-19:00 МСК
-
-
+      a.header__logo.logo.logo_white(href="#")
+        .logo__icon
+          img(src='assets/images/general/logo.png', alt="Trend")
+      
       nav.header__nav.nav
         button.nav__trigger
           != pugHelpers.Icon.call(locals, {iconName: 'menu', className: 'nav__trigger-icon', iconWidth: '36', iconHeight: '39'})
 
         .nav__list-w
           ul.nav__list
-            li.nav__item.nav__item_active
+            li.nav__item
               a.nav__link(href="#") Главная
             li.nav__item
               a.nav__link(href="#") Наши проекты
@@ -34,3 +21,12 @@ mixin header(data)
               a.nav__link(href="#") О нас
             li.nav__item
               a.nav__link(href="#") Контакты
+
+      .header__contacts
+        .header__time Пн-Пт 9:00-18:00       
+        .header__phone.phone
+          a.phone__val(href="tel:+88002000600") 8 (800) 200 06 00
+
+        a.header__button.button.open-popup(href='#callback') Заказать звонок
+
+

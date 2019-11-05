@@ -1,107 +1,139 @@
 .title
   position: relative
-  padding-top: 18px
-  padding-left: 28px
-  color: #717171
-  font-size: 40px
-  font-weight: 100
-  line-height: 1.25
-  text-transform: uppercase
-  letter-spacing: .42px
-
-  @include r(768px)
-    padding-top: 22px
-    font-size: 25px
-
+  font-size: 36px
+  font-weight: 700
+  line-height: 1.38
+  text-transform: none
+  
+.title_inner
+  padding-bottom: 8px
   &:after
     position: absolute
-    top: 0
-    left: 0
+    bottom: 0
+    left: 50%
+    content: ""
+    @include bg($title-bg)
+    transform: translateX(-50%)
+
+
+.text
+  position: relative
+  margin-bottom: 5px
+  
+  &:after
+    position: absolute
+    top: -7px
+    left: 50%
     content: ''
+    transform: translateX(-50%)
+    
     // @include bg($title-arrow)
 
 .button
   @include resetbutton()
+  border-bottom: 2px solid #d8b400
+  padding-top: 9px
+  padding-right: 33px
+  padding-bottom: 12px 
+  padding-left: 33px
+  height: 34px
   display: inline-block
   vertical-align: top
+  background-color: #fdd408
+  color: #212121
+  font-size: 16px
+  font-weight: 400
   text-decoration: none
   text-align: center
   @include tr(all .3s ease)
   
   &:hover
+    background-color: darken(#fdd408, 5)
     @include tr(all .3s ease)
+    
+
+.button_secondary
+  @include resetbutton()
+  position: relative
+  border-bottom: 5px solid #d8b400
+  padding-top: 18px
+  padding-right: 43px
+  padding-left: 43px
+  padding-bottom: 9px
+  height: 60px
+  background-color: #fdd408
+  color: #212121
+  font-size: 20px
+  font-weight: 700
+  text-decoration: none
+  text-align: center
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35)
   
-  &_theme_biggest
-    padding-top: 11px
-    padding-right: 60px
-    padding-bottom: 11px
-    padding-left: 60px
-    height: 40px
-    color: #fff
-    background-color: #660603
-    font-weight: 100 
-    font-size: 20px
-    line-height: 1
-    letter-spacing: .16px
+  &:hover
+    background-color: darken(#fdd408, 5)
+    @include tr(all .3s ease)
     
-    &:hover
-      color: #fff 
-      background-color: darken(#660603, 10)
+  &:after,
+  &:before
+    position: absolute
+    top: 50%
+    content: "" 
+    @include bg($hero-button-arrow)
+    transform: translateY(-50%)
+    
+  &:after
+    right: 5px
+    
+  &:before
+    left: 5px
+    transform: translateY(-50%) rotate(180deg)
+  
 
-  &_theme_big
-    padding-top: 5px
-    padding-right: 86px
-    padding-bottom: 7px
-    padding-left: 89px
-    
-    height: 50px
+  
 
-    background-color: #660603
+.button_third
+  @include resetbutton()
+  padding-top: 14px
+  padding-right: 36px
+  padding-bottom: 15px
+  padding-left: 59px
+  max-width: 244px
+  width: 100%    
+  height: 50px
+  background: transparent url("../images/general/service-button.png") 100% 0 no-repeat 
+  color: #212121
+  font-size: 18px
+  font-weight: 700
+  opacity: 1
     
-    color: #fff
-    font-size: 26px
-    font-weight: 100 
-    letter-spacing: .91px
+  &:hover
+    background: transparent url("../images/general/service-button.png") 100% 0 no-repeat 
+    opacity: .8
     
-    border-radius: 20px 20px 20px 20px
-    
-    &:hover
-      background-color: darken(#660603, 10)
-    
-  &_theme_general
-    padding-top: 8px
-    padding-right: 25px
-    padding-bottom: 7px
-    padding-left: 25px
-    
-    height: 39px
-    background-color: #660603
 
-    color: #fff 
-    font-size: 21px
-    font-weight: 100 
-    line-height: 1
-    // letter-spacing: .16px
-    letter-spacing: .36px
-    white-space: nowrap
-    
-    border-radius: 25px 25px 25px 25px 
 
-    &:hover
-      background-color: darken(#660603, 10)
+.button_fourth
+  border-bottom: 4px solid #d8b400
+  padding-top: 13px
+  padding-right: 14px
+  padding-left: 14px
+  width: 245px
+  height: 48px
+  background-color: #fdd408
+  font-size: 18px
+  font-weight: 700
+  
 
-  &_theme_cta
-    margin-top: 30px
-    padding-top: 10px
-    padding-bottom: 9px
-    padding-right: 30px
-    padding-left: 30px
-    display: inline-block
-    vertical-align: top
-    color: #3D7186
+.mfp-bg
+  background-color: rgba(0, 0, 0, 0.3)
+
+.wysiwyg
+  color: #212121
+  p
+    margin-bottom: 30px
     font-size: 18px
-    background: #FAB500 
-    text-transform: uppercase
-
-    &:hover
-      background-color: lighten(#FAB500, 10)
+    font-weight: 400
+    strong,
+    span,
+    b
+      font-weight: 700

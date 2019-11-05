@@ -1,0 +1,81 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../blocks/head/head.pug
+  include ../blocks/header/header.pug
+  
+  include ../blocks/hero/hero.pug
+  include ../blocks/breadcrumbs/breadcrumbs.pug
+
+  include ../blocks/services/services.pug
+  include ../blocks/projects/projects.pug
+  include ../blocks/about-us/about-us.pug
+
+
+
+  //- include ../blocks/principles/principles.pug
+  //- include ../blocks/useful/useful.pug
+
+  //- include ../blocks/schema/schema.pug
+  //- include ../blocks/clients/clients.pug
+  //- include ../blocks/history/history.pug
+  //- include ../blocks/cooperation/cooperation.pug
+  //- include ../blocks/advantages/advantages.pug
+  include ../blocks/map/map.pug
+
+  include ../blocks/cta/cta.pug
+
+  include ../blocks/footer/footer.pug
+
+  head
+      +head(head.defaults)
+  body.page
+    |%=symbols=%
+    +header()
+    //- end header
+    main.page__inner
+      +breadcrumbs()
+      //- +hero()
+      //- +services()
+      +projects-inner()
+      +cta()
+      //- +about-us()
+      //- +map()
+
+    .page__footer
+      +footer()
+
+
+
+  script(src="https://api-maps.yandex.ru/2.1/?apikey=d491e610-d9d0-4022-9b4c-e2d184cf5425&lang=ru_RU")
+  script(src='%=static=%js/separate-js/lazyload.min.js')
+  script(src='%=static=%js/separate-js/jquery.min.js')
+  script(src='%=static=%js/separate-js/slick.min.js')
+  //- script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
+  script(src='%=static=%js/main%=hash=%%=min=%.js')
+
+  script.
+    ymaps.ready(init);
+    
+    function init() {
+      var myMap = new ymaps.Map('map', {
+        center: [55.720418, 37.772047], 
+        zoom: 17,
+        controls: ['']
+      }, {
+            searchControlProvider: ''
+        });
+
+      var myPlacemark = new ymaps.Placemark(
+        [55.720418, 37.772047], {
+            balloonContent: '109428, Город Москва, Рязанский проспект, дом 26, строение 13, эт 3 пом 1 ком 13'
+        }, {
+            //- iconLayout: 'default#image',
+            //- iconImageHref: 'assets/images/general/marker.png',
+            //- iconImageSize: [14, 19],
+        }      
+      );
+
+      myMap.geoObjects.add(myPlacemark);
+
+    }

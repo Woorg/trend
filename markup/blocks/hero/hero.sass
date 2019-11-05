@@ -1,86 +1,106 @@
 .hero
   position: relative
   
-  min-height: 784px
   background-position: 50% 50%   
   background-size: cover
   background-repeat: no-repeat
-
-  @include r(768px) 
-    min-height: 924px
-
-  @include r(425px)
-    min-height: 774px
-
+  
   &__container
-    position: relative
-    padding-top: 160px
-    padding-bottom: 85px
-
-    
-    display: flex
-    flex-direction: column
-    align-items: center
-
-    @include r(768px)
-      padding-top: (160px / 2 )
-      padding-bottom: (85px / 2)
+    padding-top: 80px
+    padding-bottom: 204px
     
   &__w
     position: relative
-    margin-bottom: 32px
-    margin-left: -18px
-    padding-top: 62px
-    padding-right: 300px
-    padding-bottom: 54px
-    padding-left: 17px
-    max-width: 862px
+    padding-left: 40px
+    max-width: 870px
     width: 100%
-    background: rgba(255, 255, 255, .17) 
-
-    @include r(768px)
-      margin-left: 0
-      padding-right: 20px
-      padding-left: 20px
-
+    &:after
+      position: absolute
+      z-index: 0
+      top: -28px
+      left: 0
+      content: ""
+      width: 341px
+      height: 393px
+      background: url('../images/general/hero-w.png') 0 0 no-repeat  
   &__title
-    color: #fff
-    font-weight: 100   
-    font-size: 40px
-    text-align: center
-    letter-spacing: -0.55px
-    line-height: 1.125
-    text-transform: uppercase
-    @include r(425px)
-      font-size: 25px
-
+    margin-bottom: 36px
+    padding-right: 180px
+    text-shadow: 0 0 38px rgba(0, 0, 0, 0.35)
+    color: #ffffff
+    font-size: 30px
+    font-weight: 700
+    line-height: 1.4
+    // Text style for "Р, еализац"
+    // Text style for ""
     span
-      display: block
-      font-size: 39px
-      font-weight: 600 
-      letter-spacing: 0.1px
-
-      @include r(425px)
-        font-size: 24px
+      font-size: 44px
+  &__list
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    flex-wrap: wrap
+  &__item 
+    position: relative
+    margin-right: 10px
+    margin-bottom: 20px
+    padding-top: 12px
+    padding-bottom: 12px
+    padding-left: 58px
+    max-width: 380px
+    width: 100%
+    height: 45px
+    background: url("../images/general/hero-item.png") 100% 0 no-repeat 
     
-  &__image
-    position: absolute
-    bottom: 0
-    right: 116px
-  
-    @include r(768px)
-      display: none
+    font-size: 19px
+    font-weight: 400
+    span,
+    strong
+      font-weight: 700 
 
+    &:after,
+    &:before
+      position: absolute
+      top: 0
+      left: 0
+      content: ""
+      
+    &:before
+      width: 45px
+      height: 45px
+      background-color: #fdd408
+      
+    &:after
+      top: 50%
+      left: 10px
+      transform: translateY(-50%) 
+  &__item_1
+    &:after
+      @include bg($hero-item-icon-1)
+
+
+  &__item_2
+    &:after
+      @include bg($hero-item-icon-2)
+  &__item_3
+    &:after
+      @include bg($hero-item-icon-3)
+  &__item_4
+    &:after
+      @include bg($hero-item-icon-4)
+      
+  &__bottom
+    position: relative
+    z-index: 1
+    margin-top: 17px
+    display: flex
+    align-items: center
+    
+  // &__button
 
   &__text
-    padding-right: 16px
-    color: #FFF 
-    font-size: 24px
-    font-weight: 100
-    line-height: 1.41666666666667
-    text-transform: uppercase
-    letter-spacing: .31px
-    text-align: center
-
-    @include r(425px)
-      font-size: 20px
+    margin-left: 69px
+    color: #ffffff
+    font-size: 18px
+    span
+      font-weight: 700 

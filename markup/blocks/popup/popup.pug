@@ -1,0 +1,32 @@
+mixin popup(data)
+  .popup&attributes(attributes)
+    .popup__top
+      h2.popup__title заполните данную форму
+      .popup__text наш менеджер свяжется с вами в ближайшее время
+    .popup__form.form.form_contacts
+      form.form__w(action="", method="post")
+        .form__row
+          .form__field.form__field_input.form__field_name
+            input.form__input(type="text", value="", placeholder="Ваше имя")
+        .form__row
+          .form__field.form__field_input.form__field_phone
+            input.form__input(type="text", value="", placeholder="Ваш телефон")
+
+        .form__submit-w.button.button_fourth
+          input.form__submit(type="submit", value="Жду звонок!")
+
+        .form__privacy
+          label
+            input(type="checkbox" name="" value="1" class="form__checkbox" checked)
+            span.wpcf7-list-item-label Соглашаюсь на обработку данных и с <a href='#'>Политикой конфиденциальности</a>.
+
+
+mixin popup-thanks(data)
+  .popup.popup_thanks&attributes(attributes)
+    .popup__top
+      h2.popup__title спасибо!
+      .popup__text наш менеджер свяжется с вами в ближайшее время
+    
+    .popup__image
+      img.lazy(data-src="assets/images/general/popup-image.png", alt="")
+

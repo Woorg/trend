@@ -7,9 +7,9 @@ body
   display: flex
   flex-direction: column
   min-height: 100vh
-  color: #505050
+  color: #212121
   font-display: swap
-  // font-family: $f
+  font-family: $e
 
   &__inner
     flex-grow: 1
@@ -19,15 +19,45 @@ body
     // @include r(610px)
     //   padding-bottom: 135px        
   
+  &__container
+    padding-top: 40px 
+    
+  &__title
+    margin-bottom: 55px
+    text-align: center
+
+  &__row
+    display: flex
+    flex-wrap: wrap 
+    justify-content: flex-start
+    align-items: flex-start
+
+  &__content
+    padding-right: 33px
+    max-width: 850px
+    width: 100%
+    flex-shrink: 1
+    flex-grow: 0
+    flex-basis: auto
+    
+  &__side
+    max-width: 320px
+    margin-bottom: 116px
+    width: 100%
+    flex-shrink: 1
+    flex-grow: 0
+    flex-basis: auto
   // &__footer
   //   overflow: hidden
+  
+
 
 .container
   margin: auto
   padding-right: 15px
   padding-left: 15px
   width: 100%
-  max-width: 1170px
+  max-width: 1200px
   
 
 img

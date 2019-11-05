@@ -48,27 +48,71 @@
     display: flex
     
   &__item
-    margin-right: 22px
-    color: #fff 
-    font-size: 13px
-    font-weight: 100
-    line-height: 1.3 
-    text-transform: uppercase
-    // letter-spacing: -0.42px
+    position: relative
+    margin-right: 80px
+    color: #212121
+    font-size: 19px
+    font-weight: 400
     letter-spacing: -0.12px
     @include tr(color .3s ease)
+    
+    &:after
+      position: absolute
+      top: calc(50% - 4px)
+      right: -50px
+      content: ""
+      @include bg($nav-sep)
+      transform: translateY(-50%) 
+
     &:hover
-      color: #660603
+      color: #212121
       @include tr(color .3s ease)
 
     &:last-child
       margin-right: 0
       
-  &__item_active
-    color: #660603
+      &:after
+        display: none
+      
+  &__item_current
+    font-weight: 700 
     @include tr(color .3s ease)
     
+    .nav__link
+      border-bottom: 3px solid #212121
+      color: #212121
+      
   &__link
+    padding-top: 31px
+    padding-bottom: 38px
+    display: block
     color: inherit
     text-decoration: none
+    
 
+.nav_secondary
+  .nav__item
+    color: #FFF
+    @include tr(all .3s ease)
+    &:after
+      top: calc(50% + 3px)
+    &:hover
+      .nav__link
+        box-shadow: inset 0 -1px 1px #fdd408 
+        color: #fdd408
+        @include tr(all .3s ease)
+
+  .nav__item_current
+    color: #fdd408
+    @include tr(all .3s ease)
+    .nav__link
+      color: #fdd408
+      font-weight: 400 
+      box-shadow: inset 0 -1px 1px #fdd408
+      @include tr(all .3s ease)
+  .nav__link
+    border-bottom: none 
+    padding-top: 0
+    padding-bottom: 0
+    box-shadow: inset 0 -1px 1px #fff
+    @include tr(all .3s ease)

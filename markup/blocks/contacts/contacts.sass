@@ -1,0 +1,70 @@
+.contacts
+  position: relative
+  &:after
+    position: absolute
+    top: 0
+    left: 0
+    width: 27px
+    height: 229px
+    content: ''
+    background: url('../images/general/contacts-w.png') 0 0 no-repeat 
+  &__title
+    margin-bottom: 12px
+    font-size: 28px
+    font-weight: 700
+    line-height: 1.42
+  &__list
+    margin-bottom: 20px
+    padding-left: 20px
+  &__item
+    position: relative
+    margin-bottom: 14px
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    font-size: 18px
+    &:after
+      position: absolute
+      top: 5px
+      left: -20px
+      content: "" 
+    &:last-child
+      margin-bottom: 0
+     
+  &__item_phone
+    &:after
+      @include bg($contacts-phone)
+    
+  &__item_email
+    &:after
+      @include bg($contacts-email)
+  &__item_time
+    &:after
+      @include bg($contacts-time)
+
+  &__item_address
+    &:after
+      @include bg($contacts-address)
+
+    .contacts__val
+      line-height: 1.3
+      
+  &__item-title
+    margin-right: 3px
+    font-weight: 700 
+
+  &__val
+    margin-right: 10px
+    color: #212121
+    text-decoration: none
+    @include tr(all .3s ease)
+    &:hover
+      color: lighten(#212121, 10)
+      @include tr(all .3s ease)
+
+
+  &__form-title
+    margin-bottom: 10px
+    font-size: 22px
+    font-weight: 700
+    line-height: 1.8

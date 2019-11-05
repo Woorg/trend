@@ -1,12 +1,17 @@
 mixin hero(data)
-    section.hero.lazy(data-bg="url('assets/images/general/hero-bg.jpg')")&attributes(attributes)
-      +header()
-      .hero__container.container
-        .hero__w
-          h1.hero__title 
-            span Уже через 10 дней 
-            | получайте до 35 клиентов ежедневно
-          
-          img.hero__image.lazy(data-src="assets/images/general/robocop.png", alt="robocop")
+  section.hero.lazy(data-bg="url('assets/images/general/hero-bg.png')")&attributes(attributes)
+    .hero__container.container
+      .hero__w
+        h1.hero__title <span>Реализация услуг по</span> нанесению дорожной разметки, поставке и монтажу дорожного оборудования
         
-        .hero__text Делаем сайты, рекламу <br/>Юридическая гарантия результата прописана в договоре
+        ul.hero__list
+          li.hero__item.hero__item_1 Работаем <span>круглосуточно</span>
+          li.hero__item.hero__item_2 Заканчиваем <span>работу в срок</span>
+          li.hero__item.hero__item_3 <span>Убираем объект</span> после работ
+          li.hero__item.hero__item_4 Опыт работ <span>более 5 лет</span>
+    
+        .hero__bottom
+          a.hero__button.button.button_secondary.open-popup(href="#callback") Оставьте заявку
+
+          .hero__text и получите <span>бесплатную консультацию!</span>
+

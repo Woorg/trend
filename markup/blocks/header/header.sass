@@ -1,111 +1,73 @@
 .header
-  // position: absolute
-  // z-index: 1
+  position: relative
+  z-index: 1
   // top: 0
   // left: 0
-  width: 100%
-  background-color: transparent
-  color: #fff 
+  border-top: 3px solid #212121
+  height: 100px
+  background-color: #f4f4f4
+  color: #212121
+  box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.2)
 
-  &__top
-    padding-top: 29px
-    padding-bottom: 29px
+  &__container
+    padding-top: 7px
+    padding-bottom: 10px
     display: flex
-    justify-content: flex-end
+    align-items: flex-start
+  
+  &__logo
+    position: relative
+    z-index: 1
+    margin-top: -7px
+    
+  &__nav
+    margin-top: 0
+    margin-left: auto
+    
+  &__contacts
+    margin-left: auto
+    text-align: right
 
-    @include r(500px)
-      flex-wrap: wrap
 
-
-  &__email
-    margin-right: 70px
-    @include r(500px)
-      margin-right: auto
-      margin-bottom: 20px
-      margin-left: 30px
-      width: 100%
+  &__time
+    margin-bottom: 5px
+    font-size: 16px
+    font-weight: 400
 
   &__phone
-    margin-top: 4px
-
-    @include r(500px)
-      margin-right: auto
-      margin-left: 30px
-      width: 100%
-
-  &__body
-    padding-top: 8px
-    padding-right: 34px
-    padding-bottom: 10px
-    padding-left: 4px
-    display: flex
-    justify-content: flex-start
-    align-items: center
-    
-    background-color: rgba(255, 255, 255, .17)
-    
-    @include r(425px)
-      padding-right: 15px
-
-  &__nav
-    margin-left: auto
-
-  &__logo
-    margin-right: 40px
-
-    @include r(1100px)
-      margin-right: auto
-
-  &__button
-    @include r(1030px)
-      order: 2
-      
-    @include r(610px)
-      margin-right: auto
-      margin-left: 0
-      order: 3
-      
-
-.email,
-.phone
-  position: relative
-  color: #FFF 
-  &__val
-    color: inherit
-    text-decoration: none
-  &:after
-    position: absolute
-    top: 0
-    left: 0
-    content: '' 
-
-.email
-  &__val
-    display: block
-    font-size: 15px
-    font-weight: 100 
-    line-height: 1.07
-  &__text
-    font-size: 15px
-    font-weight: 100 
-    letter-spacing: 0.21px
-    span
-      display: block
-      font-size: 15px
-      font-weight: 600
-      letter-spacing: 0.23px
-  &:after
-    left: -30px
-    @include bg($email-icon)
-
-.phone
-  font-weight: 100
-  line-height: 1.12
-  letter-spacing: 0.21px
-  font-size: 18px
-  // &__val
-  // &__time
+    margin-bottom: 5px
   
-  &:after
-    left: -30px
-    @include bg($phone-icon)
+  // &__button
+
+
+.phone
+  &__val
+    position: relative
+    color: #212121
+    font-size: 20px
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+    &:after
+      position: absolute
+      top: 50%
+      left: -20px
+      content: ""
+      @include bg($phone-icon)
+      transform: translateY(-50%) 
+
+
+.phone_secondary
+  .phone__val
+    position: relative
+    color: #FFF 
+    &:after
+      position: absolute
+      top: 50%
+      left: -20px
+      content: ""
+      @include bg($phone-secondary-icon)
+      
+    &:hover
+      color: darken(#fff, 10)
+      

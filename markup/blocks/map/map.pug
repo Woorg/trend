@@ -1,6 +1,111 @@
 mixin map(data)
   section.map
+    #map.map__object
     .map__container.container
-      h2.map__title.title Контакты
-      .map__w
-        #map.map__object
+      .map__w.contacts
+        h2.contacts__title Наши контакты
+        
+        ul.contacts__list
+          li.contacts__item.contacts__item_phone
+            .contacts__item-title Телефон:
+            a.contacts__val(href="tel:+") 8-926-179-92-30,  
+            a.contacts__val(href="tel:+") 8-844-58-3-35-63
+
+          li.contacts__item.contacts__item_email
+            .contacts__item-title E-mail:
+            a.contacts__val(href="mailto:info@разметка-тренд.рф") info@разметка-тренд.рф
+
+          li.contacts__item.contacts__item_time
+            .contacts__item-title Время работы:
+            .contacts__val Пн-Пт 9:00-18:00
+
+          li.contacts__item.contacts__item_address
+            .contacts__item-title Адрес:
+            .contacts__val 109428, Город Москва, Рязанский проспект, дом 26, строение 13, эт 3 пом 1 ком 13
+
+        h3.contacts__form-title Есть вопрос? Используйте форму:
+        .contacts__form.form.form_contacts
+          form(action="", method="post")
+            .form__row
+              .form__field.form__field_input.form__field_name
+                input.form__input(type="text", value="" placeholder="Ваше имя")
+
+              .form__field.form__field_input.form__field_phone
+                input.form__input(type="text", value="" placeholder="Ваш телефон")
+
+            .form__row
+              .form__field.form__field_textarea
+                textarea.form__textarea(name="" placeholder="Ваш вопрос...") 
+
+            .form__row.form__row_bottom
+
+              .form__privacy
+                label
+                  input(type="checkbox" name="" value="1" class="form__checkbox" checked)
+                  span.wpcf7-list-item-label Соглашаюсь на обработку данных и с
+                    a(href="#") Политикой конфиденциальности.
+
+
+              .form__submit-w.button.button_fourth
+                input.form__submit(type="submit", value="Жду звонок!")
+
+
+
+
+mixin map-contacts(data)
+  section.map
+   
+      
+    #map.map__object
+
+    .map__container.container
+      .map__w.contacts
+        h2.contacts__title Для связи с нами используйте:
+        
+        ul.contacts__list
+          li.contacts__item.contacts__item_phone
+            .contacts__item-title Телефон:
+            a.contacts__val(href="tel:+") 8-926-179-92-30,  
+            a.contacts__val(href="tel:+") 8-844-58-3-35-63
+
+          li.contacts__item.contacts__item_email
+            .contacts__item-title E-mail:
+            a.contacts__val(href="mailto:info@разметка-тренд.рф") info@разметка-тренд.рф
+
+          li.contacts__item.contacts__item_time
+            .contacts__item-title Время работы:
+            .contacts__val Пн-Пт 9:00-18:00
+
+          li.contacts__item.contacts__item_address
+            .contacts__item-title Адрес:
+            .contacts__val 109428, Город Москва, Рязанский проспект, дом 26, строение 13, эт 3 пом 1 ком 13
+
+        h3.contacts__form-title Или заполните контактную форму:
+        .contacts__form.form.form_contacts
+          form(action="", method="post")
+            .form__row
+              .form__field.form__field_input.form__field_name
+                input.form__input(type="text", value="" placeholder="Ваше имя")
+
+              .form__field.form__field_input.form__field_phone
+                input.form__input(type="text", value="" placeholder="Ваш телефон")
+
+            .form__row
+              .form__field.form__field_textarea
+                textarea.form__textarea(name="" placeholder="Ваше сообщение..." value="") 
+
+            .form__row.form__row_bottom
+
+              .form__privacy
+                label
+                  input(type="checkbox" name="" value="1" class="form__checkbox" checked)
+                  span.wpcf7-list-item-label Соглашаюсь на обработку данных и с
+                    a(href="#") Политикой конфиденциальности.
+
+
+              .form__submit-w.button.button_fourth
+                input.form__submit(type="submit", value="Жду звонок!")
+
+
+
+

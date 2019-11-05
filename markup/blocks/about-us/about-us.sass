@@ -1,0 +1,58 @@
+.about-us
+  background: #fff 
+  &__container
+    padding-top: 65px
+    padding-bottom: 50px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+  &__image
+    position: relative
+    z-index: 1
+    margin-left: 15px
+    max-width: 485px
+    width: 100%
+    flex-shrink: 0
+    font-size: 0
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+    &:after
+      position: absolute
+      z-index: -1
+      top: -15px
+      left: -15px
+      bottom: 15px
+      width: 100%
+      content: "" 
+      background-color: #fdd408
+    img 
+    
+    
+
+  &__w
+    margin-top: -19px
+    margin-left: 30px
+
+  &__title
+    margin-bottom: 10px
+    font-size: 28px
+    font-weight: 700 
+  &__text
+    margin-bottom: 10px
+    font-size: 18px
+    font-weight: 400
+    line-height: 1.45
+    
+  &__more
+    position: relative
+    border-bottom: 1px dashed #212121  
+    color: #212121
+    font-size: 18px
+    font-weight: 700
+    text-decoration: none
+    @include tr(all .3s ease)
+    &:hover
+      border-bottom: 1px dashed transparent
+      @include tr(all .3s ease)
+
+
+

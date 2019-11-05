@@ -1,0 +1,108 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../blocks/head/head.pug
+  include ../blocks/header/header.pug
+  
+  include ../blocks/hero/hero.pug
+  include ../blocks/breadcrumbs/breadcrumbs.pug
+
+  //- include ../blocks/services/services.pug
+  //- include ../blocks/projects/projects.pug
+  //- include ../blocks/about-us/about-us.pug
+
+  include ../blocks/guarantee/guarantee.pug
+  
+
+  //- include ../blocks/principles/principles.pug
+  //- include ../blocks/useful/useful.pug
+
+  //- include ../blocks/schema/schema.pug
+  //- include ../blocks/clients/clients.pug
+  //- include ../blocks/history/history.pug
+  //- include ../blocks/cooperation/cooperation.pug
+  //- include ../blocks/advantages/advantages.pug
+  //- include ../blocks/map/map.pug
+
+  include ../blocks/cta/cta.pug
+
+  include ../blocks/footer/footer.pug
+
+  head
+      +head(head.defaults)
+  body.page
+    |%=symbols=%
+    +header()
+    //- end header
+    main.page__inner
+      +breadcrumbs-guarantees()
+      section.page__container.container
+        h1.page__title.title.title_inner Наши гарантии
+        .page__row
+          .page__content.wysiwyg 
+            p Здесь можно рассказать о своей деятельности. Далее текст для примера! Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации существенных финансовых и административных условий. Идейные соображения высшего порядка, а также консультация с широким активом играет важную роль в формировании форм развития.
+            p 
+              span 1.
+              | Не следует, однако забывать, что консультация с широким активом требуют от нас анализа новых предложений. Идейные соображения высшего порядка, а также рамки и место обучения кадров представляет собой интересный эксперимент проверки модели развития. Значимость этих проблем настолько очевидна, что консультация с широким активом способствует подготовки и реализации форм развития.
+            p 
+              span 2.
+              | С другой стороны рамки и место обучения кадров позволяетоценить значение позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации дальнейших направлений развития. Повседневная практика показывает, что сложившаяся структура организации требуют от нас анализа модели развития.
+            p 
+              span 3.
+              | Таким образом сложившаяся структура организации в значительной степени обуславливает создание систем массового участия. Товарищи! дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+
+            p 
+              span 4.
+              | Товарищи! рамки и место обучения кадров требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение форм развития.
+
+            p 
+              span 5.
+              | Задача организации, в особенности же новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Равным образом постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки систем массового участия.
+
+
+          aside.page__side
+            +guarantee()
+
+      //- +hero()
+      //- +services()
+      +cta()
+      //- +about-us()
+      //- +map()
+
+    .page__footer
+      +footer()
+
+
+
+  script(src="https://api-maps.yandex.ru/2.1/?apikey=d491e610-d9d0-4022-9b4c-e2d184cf5425&lang=ru_RU")
+  script(src='%=static=%js/separate-js/lazyload.min.js')
+  script(src='%=static=%js/separate-js/jquery.min.js')
+  script(src='%=static=%js/separate-js/slick.min.js')
+  //- script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
+  script(src='%=static=%js/main%=hash=%%=min=%.js')
+
+  script.
+    ymaps.ready(init);
+    
+    function init() {
+      var myMap = new ymaps.Map('map', {
+        center: [55.720418, 37.772047], 
+        zoom: 17,
+        controls: ['']
+      }, {
+            searchControlProvider: ''
+        });
+
+      var myPlacemark = new ymaps.Placemark(
+        [55.720418, 37.772047], {
+            balloonContent: '109428, Город Москва, Рязанский проспект, дом 26, строение 13, эт 3 пом 1 ком 13'
+        }, {
+            //- iconLayout: 'default#image',
+            //- iconImageHref: 'assets/images/general/marker.png',
+            //- iconImageSize: [14, 19],
+        }      
+      );
+
+      myMap.geoObjects.add(myPlacemark);
+
+    }

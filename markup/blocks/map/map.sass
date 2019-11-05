@@ -1,16 +1,69 @@
 .map
+  position: relative
+  // padding-top: 32.03125%
+  height: 615px
+  overflow: hidden
+  
+  // &:before
+  //   top: 0
+  // &:after 
+  //   bottom: 0
+  //   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2)
   &__container
-    padding-top: 80px
-    padding-bottom: 94px
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
   &__title
     margin-bottom: 48px
   &__w
-    position: relative
-    padding-top: 42.1%
-    overflow: hidden
+    position: absolute
+    top: 65px
+    // left: 25px
+    left: 50px
+    padding-top: 22px
+    padding-right: 33px
+    padding-bottom: 24px
+    padding-left: 71px
+    width: 575px
+    background-color: #ffffff
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+    &:after,
+    &:before
+      position: absolute
+      content: "" 
+      
+    &:after
+      z-index: -1
+      top: -15px
+      right: 15px
+      bottom: 15px
+      left: -15px
+      width: 100%
+      height: 100%
+      background-color: #fdd408
+    &:before
+      top: 37px
+      left: 30px
+      width: 27px
+      height: 220px
+      background: url('../images/general/contacts-w.png') 0 0 no-repeat
+      
   &__object
     position: absolute
+    z-index: 0
     top: 0
     left: 0
     width: 100%
     height: 100%
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2)
+    &:after
+      position: absolute
+      z-index: 0
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      content: ""
+      box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2)
+      pointer-events: none
